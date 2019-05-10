@@ -1,5 +1,7 @@
 !function(exports){
 'use strict';
+/*! (c) Andrea Giammarchi - ISC */
+
 // Custom
 var UID = '-' + Math.random().toFixed(6) + '%';
 //                           Edge issue!

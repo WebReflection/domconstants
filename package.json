@@ -15,7 +15,7 @@
     "dom",
     "constants"
   ],
-  "author": "",
+  "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
     "ascjs": "^3.0.1",
