@@ -1,6 +1,6 @@
 {
   "name": "domconstants",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Commonly used DOM constants for various projects.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
