@@ -11,11 +11,23 @@
     "index": "echo '!function(exports){'>index.js && cat cjs/index.js>>index.js && echo '}(domconstants={});'>>index.js;",
     "min": "echo '/*! (c) Andrea Giammarchi - ISC */' > min.js && uglifyjs index.js -c -m >> min.js"
   },
-  "keywords": ["dom", "constants"],
+  "keywords": [
+    "dom",
+    "constants"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "ascjs": "^3.0.1",
     "uglify-js": "^3.5.11"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/domconstants.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/domconstants/issues"
+  },
+  "homepage": "https://github.com/WebReflection/domconstants#readme"
 }
