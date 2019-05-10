@@ -1,0 +1,21 @@
+{
+  "name": "domconstants",
+  "version": "0.0.0",
+  "description": "Commonly used DOM constants for various projects.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "min.js",
+  "scripts": {
+    "build": "npm run cjs && npm run index && npm run min",
+    "cjs": "ascjs esm cjs",
+    "index": "echo '!function(exports){'>index.js && cat cjs/index.js>>index.js && echo '}(domconstants={});'>>index.js;",
+    "min": "echo '/*! (c) Andrea Giammarchi - ISC */' > min.js && uglifyjs index.js -c -m >> min.js"
+  },
+  "keywords": ["dom", "constants"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^3.0.1",
+    "uglify-js": "^3.5.11"
+  }
+}
