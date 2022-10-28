@@ -4,12 +4,9 @@
   "description": "Commonly used DOM constants for various projects.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
-  "unpkg": "min.js",
+  "unpkg": "esm/index.js",
   "scripts": {
-    "build": "npm run cjs && npm run index && npm run min",
-    "cjs": "ascjs esm cjs",
-    "index": "echo '!function(exports){'>index.js && cat cjs/index.js>>index.js && echo '}(domconstants={});'>>index.js;",
-    "min": "echo '/*! (c) Andrea Giammarchi - ISC */' > min.js && uglifyjs index.js -c -m >> min.js"
+    "build": "ascjs esm cjs"
   },
   "keywords": [
     "dom",
@@ -18,10 +15,8 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "ascjs": "^3.0.1",
-    "uglify-js": "^3.5.11"
+    "ascjs": "^5.0.1"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WebReflection/domconstants.git"

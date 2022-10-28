@@ -1,40 +1,12 @@
 /*! (c) Andrea Giammarchi - ISC */
 
-// Custom
-var UID = '-' + Math.random().toFixed(6) + '%';
-//                           Edge issue!
+export const ELEMENT_NODE = 1;
+export const ATTRIBUTE_NODE = 2;
+export const TEXT_NODE = 3;
+export const COMMENT_NODE = 8;
+export const DOCUMENT_NODE = 9;
+export const DOCUMENT_TYPE_NODE = 10;
+export const DOCUMENT_FRAGMENT_NODE = 11;
 
-var UID_IE = false;
-
-try {
-  if (!(function (template, content, tabindex) {
-    return content in template && (
-      (template.innerHTML = '<p ' + tabindex + '="' + UID + '"></p>'),
-      template[content].childNodes[0].getAttribute(tabindex) == UID
-    );
-  }(document.createElement('template'), 'content', 'tabindex'))) {
-    UID = '_dt: ' + UID.slice(1, -1) + ';';
-    UID_IE = true;
-  }
-} catch(meh) {}
-
-var UIDC = '<!--' + UID + '-->';
-
-// DOM
-var COMMENT_NODE = 8;
-var DOCUMENT_FRAGMENT_NODE = 11;
-var ELEMENT_NODE = 1;
-var TEXT_NODE = 3;
-
-var SHOULD_USE_TEXT_CONTENT = /^(?:plaintext|script|style|textarea|title|xmp)$/i;
-var VOID_ELEMENTS = /^(?:area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)$/i;
-
-export {
-  UID, UIDC, UID_IE,
-  COMMENT_NODE,
-  DOCUMENT_FRAGMENT_NODE,
-  ELEMENT_NODE,
-  TEXT_NODE,
-  SHOULD_USE_TEXT_CONTENT,
-  VOID_ELEMENTS
-};
+export const TEXT_ELEMENTS = /^(?:plaintext|script|style|textarea|title|xmp)$/i;
+export const VOID_ELEMENTS = /^(?:area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)$/i;
