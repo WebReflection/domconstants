@@ -2,11 +2,21 @@
   "name": "domconstants",
   "version": "1.0.0",
   "description": "Commonly used DOM constants for various projects.",
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
-  "unpkg": "esm/index.js",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "unpkg": "./esm/index.js",
   "scripts": {
-    "build": "ascjs esm cjs"
+    "build": "ascjs esm cjs && npm run ts",
+    "ts": "tsc -p ."
   },
   "keywords": [
     "dom",
@@ -15,7 +25,8 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "ascjs": "^5.0.1"
+    "ascjs": "^6.0.3",
+    "typescript": "^5.2.2"
   },
   "repository": {
     "type": "git",
