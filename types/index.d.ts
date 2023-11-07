@@ -1,12 +1,5 @@
-/*! (c) Andrea Giammarchi - ISC */
-export const ELEMENT_NODE: 1;
-export const ATTRIBUTE_NODE: 2;
-export const TEXT_NODE: 3;
-export const COMMENT_NODE: 8;
-export const DOCUMENT_NODE: 9;
-export const DOCUMENT_TYPE_NODE: 10;
-export const DOCUMENT_FRAGMENT_NODE: 11;
-export const TEXT_SET: Set<string>;
-export const VOID_SET: Set<string>;
-export const TEXT_ELEMENTS: RegExp;
-export const VOID_ELEMENTS: RegExp;
+export * from "./constants.js";
+export * from "./re.js";
+import TEXT_SET from './text-set.js';
+import VOID_SET from './void-set.js';
+export { TEXT_SET, VOID_SET };

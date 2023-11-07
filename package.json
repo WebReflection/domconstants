@@ -15,7 +15,7 @@
   },
   "unpkg": "./esm/index.js",
   "scripts": {
-    "build": "ascjs esm cjs && npm run ts",
+    "build": "ascjs --no-default esm cjs && npm run ts",
     "ts": "tsc -p ."
   },
   "keywords": [
