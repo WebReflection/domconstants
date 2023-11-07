@@ -11,6 +11,16 @@
       "import": "./esm/index.js",
       "default": "./cjs/index.js"
     },
+    "./text": {
+      "types": "./types/text-set.d.ts",
+      "import": "./esm/text-set.js",
+      "default": "./cjs/text-set.js"
+    },
+    "./void": {
+      "types": "./types/void-set.d.ts",
+      "import": "./esm/void-set.js",
+      "default": "./cjs/void-set.js"
+    },
     "./package.json": "./package.json"
   },
   "unpkg": "./esm/index.js",
