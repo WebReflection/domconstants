@@ -8,34 +8,46 @@ export const DOCUMENT_NODE = 9;
 export const DOCUMENT_TYPE_NODE = 10;
 export const DOCUMENT_FRAGMENT_NODE = 11;
 
-/** @type {Set<'PLAINTEXT' | 'SCRIPT' | 'STYLE' | 'TEXTAREA' | 'TITLE' | 'XMP'>} */
-export const TEXT_SET = new Set([
-  'PLAINTEXT',
-  'SCRIPT',
-  'STYLE',
-  'TEXTAREA',
-  'TITLE',
-  'XMP',
+/**
+ * @template T
+ * @param {T[]} list
+ * @returns {Set<T>}
+ */
+const set = list => {
+  const result = new Set;
+  for (let i = 0; i < list.length; i++) {
+    result.add(list[i]);
+    result.add(list[i].toUpperCase());
+  }
+  return result;
+};
+
+export const TEXT_SET = set([
+  'plaintext',
+  'script',
+  'style',
+  'textarea',
+  'title',
+  'xmp',
 ]);
 
-/** @type {Set<'AREA' | 'BASE' | 'BR' | 'COL' | 'EMBED' | 'HR' | 'IMG' | 'INPUT' | 'KEYGEN' | 'LINK' | 'MENUITEM' | 'META' | 'PARAM' | 'SOURCE' | 'TRACK' | 'WBR'>} */
-export const VOID_SET = new Set([
-  'AREA',
-  'BASE',
-  'BR',
-  'COL',
-  'EMBED',
-  'HR',
-  'IMG',
-  'INPUT',
-  'KEYGEN',
-  'LINK',
-  'MENUITEM',
-  'META',
-  'PARAM',
-  'SOURCE',
-  'TRACK',
-  'WBR',
+export const VOID_SET = set([
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'keygen',
+  'link',
+  'menuitem',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
 ]);
 
 const re = set => new RegExp(`^(?:${[...set].join('|')})$`, 'i');

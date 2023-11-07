@@ -16,35 +16,47 @@ exports.DOCUMENT_TYPE_NODE = DOCUMENT_TYPE_NODE;
 const DOCUMENT_FRAGMENT_NODE = 11;
 exports.DOCUMENT_FRAGMENT_NODE = DOCUMENT_FRAGMENT_NODE;
 
-/** @type {Set<'PLAINTEXT' | 'SCRIPT' | 'STYLE' | 'TEXTAREA' | 'TITLE' | 'XMP'>} */
-const TEXT_SET = new Set([
-  'PLAINTEXT',
-  'SCRIPT',
-  'STYLE',
-  'TEXTAREA',
-  'TITLE',
-  'XMP',
+/**
+ * @template T
+ * @param {T[]} list
+ * @returns {Set<T>}
+ */
+const set = list => {
+  const result = new Set;
+  for (let i = 0; i < list.length; i++) {
+    result.add(list[i]);
+    result.add(list[i].toUpperCase());
+  }
+  return result;
+};
+
+const TEXT_SET = set([
+  'plaintext',
+  'script',
+  'style',
+  'textarea',
+  'title',
+  'xmp',
 ]);
 exports.TEXT_SET = TEXT_SET;
 
-/** @type {Set<'AREA' | 'BASE' | 'BR' | 'COL' | 'EMBED' | 'HR' | 'IMG' | 'INPUT' | 'KEYGEN' | 'LINK' | 'MENUITEM' | 'META' | 'PARAM' | 'SOURCE' | 'TRACK' | 'WBR'>} */
-const VOID_SET = new Set([
-  'AREA',
-  'BASE',
-  'BR',
-  'COL',
-  'EMBED',
-  'HR',
-  'IMG',
-  'INPUT',
-  'KEYGEN',
-  'LINK',
-  'MENUITEM',
-  'META',
-  'PARAM',
-  'SOURCE',
-  'TRACK',
-  'WBR',
+const VOID_SET = set([
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'keygen',
+  'link',
+  'menuitem',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
 ]);
 exports.VOID_SET = VOID_SET;
 
