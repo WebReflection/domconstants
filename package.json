@@ -21,6 +21,16 @@
       "import": "./esm/void-set.js",
       "default": "./cjs/void-set.js"
     },
+    "./constants": {
+      "types": "./types/constants.d.ts",
+      "import": "./esm/constants.js",
+      "default": "./cjs/constants.js"
+    },
+    "./re": {
+      "types": "./types/re.d.ts",
+      "import": "./esm/re.js",
+      "default": "./cjs/re.js"
+    },
     "./package.json": "./package.json"
   },
   "unpkg": "./esm/index.js",
