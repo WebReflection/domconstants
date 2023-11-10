@@ -1,10 +1,4 @@
-import { set } from './utils.js';
+import reset from './utils.js';
+import { TEXT_ELEMENTS } from './re.js';
 
-export default set([
-  'plaintext',
-  'script',
-  'style',
-  'textarea',
-  'title',
-  'xmp',
-]);
+export default reset(TEXT_ELEMENTS);

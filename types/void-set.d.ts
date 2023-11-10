@@ -1,2 +1,2 @@
-declare const _default: Set<string>;
+declare const _default: Set<any>;
 export default _default;

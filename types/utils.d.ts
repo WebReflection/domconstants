@@ -1,2 +1,4 @@
-export function set<T>(list: T[]): Set<T>;
-export function re(set: any): RegExp;
+declare function _default({ source }: {
+    source: any;
+}): Set<any>;
+export default _default;

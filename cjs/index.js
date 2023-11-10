@@ -1,6 +1,4 @@
 'use strict';
-/*! (c) Andrea Giammarchi - ISC */
-
 const TEXT_SET = (require('./text-set.js'));
 const VOID_SET = (require('./void-set.js'));
 

@@ -1,9 +1,5 @@
 'use strict';
-const TEXT_SET = (require('./text-set.js'));
-const VOID_SET = (require('./text-set.js'));
-const { re } = require('./utils.js');
-
-const TEXT_ELEMENTS = re(TEXT_SET);
+const TEXT_ELEMENTS = /^(?:plaintext|script|style|textarea|title|xmp)$/i;
 exports.TEXT_ELEMENTS = TEXT_ELEMENTS;
-const VOID_ELEMENTS = re(VOID_SET);
+const VOID_ELEMENTS = /^(?:area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)$/i;
 exports.VOID_ELEMENTS = VOID_ELEMENTS;

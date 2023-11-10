@@ -1,21 +1,5 @@
 'use strict';
-const { set } = require('./utils.js');
+const reset = (require('./utils.js'));
+const { VOID_ELEMENTS } = require('./re.js');
 
-module.exports = set([
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'keygen',
-  'link',
-  'menuitem',
-  'meta',
-  'param',
-  'source',
-  'track',
-  'wbr',
-]);
+module.exports = reset(VOID_ELEMENTS);

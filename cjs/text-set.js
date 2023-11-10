@@ -1,11 +1,5 @@
 'use strict';
-const { set } = require('./utils.js');
+const reset = (require('./utils.js'));
+const { TEXT_ELEMENTS } = require('./re.js');
 
-module.exports = set([
-  'plaintext',
-  'script',
-  'style',
-  'textarea',
-  'title',
-  'xmp',
-]);
+module.exports = reset(TEXT_ELEMENTS);

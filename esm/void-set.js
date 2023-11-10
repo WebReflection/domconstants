@@ -1,20 +1,4 @@
-import { set } from './utils.js';
+import reset from './utils.js';
+import { VOID_ELEMENTS } from './re.js';
 
-export default set([
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'keygen',
-  'link',
-  'menuitem',
-  'meta',
-  'param',
-  'source',
-  'track',
-  'wbr',
-]);
+export default reset(VOID_ELEMENTS);

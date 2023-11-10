@@ -1,5 +1,3 @@
-/*! (c) Andrea Giammarchi - ISC */
-
 import TEXT_SET from './text-set.js';
 import VOID_SET from './void-set.js';
 
